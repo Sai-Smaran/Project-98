@@ -1,0 +1,18 @@
+def swappingFileData():
+    IstFilePath=input("Path to replace content from: ")
+    IIndFilePath=input("Path to replace the content to: ")
+    IstFileRead=open(IstFilePath,"r")
+    IIndFileRead=open(IIndFilePath,"r")
+    IstFileData=IstFileRead.readlines()
+    IIndFileData=IIndFileRead.readlines()
+    IstFileWrite=open(IstFilePath,"w")
+    IIndFileWrite=open(IIndFilePath,"w")
+    IstFileWrite.writelines(IIndFileData)
+    IIndFileWrite.writelines(IstFileData)
+    print("Done!")
+    IstFileRead.close()
+    IIndFileRead.close()
+    IstFileWrite.close()
+    IIndFileWrite.close()
+
+swappingFileData()
